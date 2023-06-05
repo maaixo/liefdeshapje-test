@@ -1,0 +1,119 @@
+.nav-wrapper {
+    display: flex;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.7);
+
+    @media screen and (min-width: 768px) {
+        justify-content: space-around;
+    }
+
+    .header-logo {
+        margin-left: 0.5rem;
+        width: 10rem;
+        border: 1px solid $color-white-opacity;
+    }
+
+    .primary-navigation {
+        display: none;
+
+        position: absolute;
+        padding: 1.5rem;
+        inset: 7.5rem 0.5rem auto;
+        max-width: 25rem;
+        margin-left: auto;
+        background-color: $color-white;
+        border-radius: 2px;
+        box-shadow: 0 1px 0.15rem $color-accent;
+
+        &[data-visible] {
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: initial;
+            background: transparent;
+            box-shadow: none;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: 1rem;
+            align-items: center;
+
+            li {
+                @media screen and (min-width: 768px) {
+                    margin: 0 0.5rem;
+                }
+                @media screen and (min-width: 992px) {
+                    margin: 0 1rem;
+                }
+                @media screen and (min-width: 1200px) {
+                    margin: 0 2rem;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-black;
+                font-weight: $font-weight-bold;
+
+                &:hover,
+                &:focus {
+                    color: $color-accent;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            
+            .nav-list {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .mobile-nav-toggle {
+        margin-right: 0.5rem;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        width: 2.5em;
+        aspect-ratio: 1;
+
+        &[aria-expanded="false"] {
+            background-image: url("./images/hamburger-icon.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &[aria-expanded="true"] {
+            background-image: url("./images/close-icon.svg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .hamburger-icon, 
+        .close-icon {
+            height: 2.5rem;
+            width: auto;
+        }
+    
+        .close-icon {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+}

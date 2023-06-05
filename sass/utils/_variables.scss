@@ -1,0 +1,16 @@
+// breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+//colors
+$color-black: rgb(0, 0, 0);
+$color-white: rgb(255, 255, 255);
+$color-white-opacity: rgb(255, 255, 255, 0.4);
+$color-accent: rgb(228, 190, 190);
+$color-accent-opacity: rgb(228, 190, 190, 0.6);

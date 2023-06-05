@@ -1,0 +1,14 @@
+{
+  "name": "liefdeshapje_site",
+  "version": "1.0.0",
+  "description": "liefdeshapje",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.3.9"
+  }
+}

@@ -1,0 +1,28 @@
+button {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 100vh;
+    border-style: none;
+    background-color: $color-accent-opacity;
+    
+    a {
+        text-decoration: none;
+        color: $color-black;
+    }
+}
+
+.big-button {
+    position: relative;
+    padding: 1rem 2rem;
+    font-family: $font-family-cursive;
+    font-size: 1.5rem;
+    background-color: $color-accent;
+
+    &:after {
+        content: url("./images/down-arrow.png");
+        position: absolute;
+        width: 3rem;
+        right: -2.35rem;
+        top: 1.5rem;
+    }
+}
